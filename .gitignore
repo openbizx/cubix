@@ -7,3 +7,4 @@ install.lock
 cache
 tpl_cpl
 upload
+/composer.lock
