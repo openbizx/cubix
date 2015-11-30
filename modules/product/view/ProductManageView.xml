@@ -1,0 +1,17 @@
+<?xml version="1.0" standalone="no"?>
+<!--
+  Openbizx Cubi Application Platform
+  LICENSE http://code.google.com/p/openbiz-cubi/wiki/CubiLicense
+  Copyright (c) 2005-2011, Openbiz Technology LLC
+  Version $Id: ProductManageView.xml 3480 2012-06-17 02:51:42Z hellojixian@gmail.com $
+-->
+<WebPage Name="ProductManageView" 
+	Description="Product Description Management" 
+	Class="WebPage" 
+	Access="product.Access" 
+	TemplateEngine="Smarty" 
+	TemplateFile="view.tpl">
+   <FormReferences>
+   		<Reference Name="product.form.ProductListForm"/>
+   </FormReferences>       
+</WebPage>

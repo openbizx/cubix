@@ -1,0 +1,6 @@
+<?xml version="1.0" standalone="no"?>
+<WebPage Name="ContactDetailView" Description="Contact Detail"  Class="WebPage"  Tab="" TemplateEngine="Smarty" TemplateFile="view_contact.tpl" access="contact.access">
+	<FormReferences>
+        <Reference Name="contact_mob.form.ContactDetailForm"/>        
+    </FormReferences>
+</WebPage>

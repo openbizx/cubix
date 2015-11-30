@@ -1,0 +1,17 @@
+<?xml version="1.0" standalone="no"?>
+<!--
+  Openbizx Cubi Application Platform
+  LICENSE http://code.google.com/p/openbiz-cubi/wiki/CubiLicense
+  Copyright (c) 2005-2011, Openbiz Technology LLC
+  Version $Id: ContactGeneralCardView.xml 3356 2012-05-31 05:47:51Z rockyswen@gmail.com $
+-->
+<WebPage Name="ContactGeneralCardView" 
+          Class="WebPage" 
+          Description="General Name Cards"           
+          Tab="" 
+          TemplateEngine="Smarty" 
+          TemplateFile="view.tpl">
+    <FormReferences>
+        <Reference Name="contact.form.ContactGeneralCardForm"/>
+    </FormReferences>   
+</WebPage>

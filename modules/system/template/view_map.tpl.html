@@ -1,0 +1,32 @@
+{Openbizx\Openbizx::$app->getClientProxy()->appendScripts('cookies','cookies.js')}
+{Openbizx\Openbizx::$app->getClientProxy()->appendScripts('general_ui','general_ui.js')}
+
+{php}
+if (OPENBIZ_JSLIB_BASE!='JQUERY') {
+	$includedScripts = "
+	<script src=\"".OPENBIZ_JS_URL."/jquery.js\"></script>
+	<script>try{var \$j=jQuery.noConflict();}catch(e){}</script>
+	<script src=\"".OPENBIZ_JS_URL."/jquery-ui-1.8.12.custom.min.js\"></script>
+	";
+        Openbizx\Openbizx::$app->getClientProxy()->appendScripts('on-map-view',$includedScripts, false);
+
+}
+{/php}
+
+{Openbizx\Openbizx::$app->getClientProxy()->appendStyles('general','general.css')}
+{Openbizx\Openbizx::$app->getClientProxy()->appendStyles('system_backend','system_backend.css')}
+{Openbizx\Openbizx::$app->getClientProxy()->appendStyles('system_menu_icons','system_menu_icons.css')}
+
+{php}
+$appendStyle = "
+    <style>
+        .detail_form_panel_padding
+        {
+            padding-left:10px;
+        }
+    </style>
+    ";
+    Openbizx\Openbizx::$app->getClientProxy()->appendStyles('on-map-view-style',$appendStyle, false);
+{/php}
+
+{include file='system_view.tpl.html'}

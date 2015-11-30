@@ -1,0 +1,63 @@
+{if !isset($left_Menu)}
+    {assign var=left_menu value="menu.widget.ApplicationMenu"}
+{/if}
+
+{assign var=left_menu_content value=Openbizx\Openbizx::getObject($left_menu)}
+{assign var=system_left_menu_content value=$left_menu_content->render() }
+
+{if $system_left_top_content}
+    {$system_left_top_content}
+{/if}
+
+	<!-- left menu block start -->
+	<div class="content_block">
+		<div class="header"></div>
+		<div class="content" >								
+			{$system_left_menu_content}
+		</div>
+		<div class="footer"></div>						
+	</div>
+	<div class="v_spacer"></div>
+	<!-- left menu block end -->
+	
+	{foreach key=formname item=form from=$forms}	
+		{if preg_match("/LeftWidget$/si",$formname)}						    
+		<div class="content_block">
+			<div class="header"></div>
+			<div class="content" >	
+		 	
+			<div>
+			 	{$form}
+			</div>
+							
+			</div>
+			<div class="footer"></div>						
+		</div>
+		<div class="v_spacer"></div>
+		{/if}
+	{/foreach}		
+
+	{foreach key=formname item=form from=$widgets}	
+		{if preg_match("/LeftWidget$/si",$formname)}						    
+		<div class="content_block">
+			<div class="header"></div>
+			<div class="content" >	
+		 	
+			<div>
+			 	{$form}
+			</div>
+							
+			</div>
+			<div class="footer"></div>						
+		</div>
+		<div class="v_spacer"></div>
+		{/if}
+	{/foreach}	
+											
+	<!-- left help block start -->
+<div>
+    {Openbizx\Openbizx::getObject('help.form.HelpWidgetListForm',1)->render()}		
+</div>
+
+	<div class="v_spacer"></div>
+	<!-- left help block end -->

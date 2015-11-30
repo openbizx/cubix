@@ -1,0 +1,18 @@
+<?xml version="1.0" standalone="no"?>
+<!--
+  Openbizx Cubi Application Platform
+  LICENSE http://code.google.com/p/openbiz-cubi/wiki/CubiLicense
+  Copyright (c) 2005-2011, Openbiz Technology LLC
+  Version $Id: SecurityRuleView.xml 3370 2012-05-31 06:15:35Z rockyswen@gmail.com $
+-->
+<WebPage Name="SecurityRuleView" Title="Security Rule Management" Description="Security Rule Management" Class="WebPage" Tab="" TemplateEngine="Smarty" TemplateFile="view.tpl" Access="Security.Administer_Security">
+   <FormReferences>
+   		<Reference Name="security.form.URLRuleListForm" Description="URL Filters"/>
+   		<Reference Name="security.form.DomainRuleListForm" Description="Domain Filters"/>
+   		<Reference Name="security.form.IPRuleListForm" Description="IP Filters"/>
+   		<Reference Name="security.form.AgentRuleListForm" Description="Agent Filters"/>
+   		<Reference Name="security.form.PostRuleListForm" Description="Post Filters"/>
+   		<Reference Name="security.form.GetRuleListForm" Description="Get Filters"/>
+   </FormReferences>
+   
+</WebPage>

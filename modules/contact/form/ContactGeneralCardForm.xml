@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Openbizx Cubi Application Platform
+  LICENSE http://code.google.com/p/openbiz-cubi/wiki/CubiLicense
+  Copyright (c) 2005-2011, Openbiz Technology LLC
+  Version $Id: ContactGeneralCardForm.xml 4076 2012-09-01 08:11:35Z rockyswen@gmail.com $
+-->
+<EasyForm Name="ContactGeneralCardForm"          
+          InheritFrom="contact.form.ContactListForm" 
+          Class="ContactForm" 
+          FormType="List" 
+          jsClass="jbForm" 
+          Title="Contact Cards" 
+          Description="You can view your contacts in Cards view." 
+          Icon="{OPENBIZ_RESOURCE_URL}/contact/images/icon_vcards.gif" 
+          BizDataObj="contact.do.ContactDO" 
+          PageSize="9" 
+          DefaultForm="Y" 
+          TemplateEngine="Smarty" 
+          TemplateFile="form_contact_card.tpl.html" 
+          EventName="CONTACT" 
+          MessageFile="Contact.msg"  
+          Access="contact.access">
+    <DataPanel>
+        <Element Name="fld_Id" Class="Hidden" Hidden="Y" FieldName="Id" Label="ID" Sortable="Y" AllowURLParam="N" />
+        <Element Name="fld_share" Class="ColumnShare" 
+                 MyPrivateImg="{OPENBIZ_RESOURCE_URL}/contact/images/icon_contact.gif"
+                 MySharedImg="{OPENBIZ_RESOURCE_URL}/contact/images/icon_contact_shared.gif"
+                 MyAssignedImg="{OPENBIZ_RESOURCE_URL}/contact/images/icon_contact_assigned.gif"
+                 MyDistributedImg="{OPENBIZ_RESOURCE_URL}/contact/images/icon_contact_distributed.gif" 
+                 GroupSharedImg="{OPENBIZ_RESOURCE_URL}/contact/images/icon_contact_shared_group.gif"
+                 OtherSharedImg="{OPENBIZ_RESOURCE_URL}/contact/images/icon_contact_shared_other.gif"
+                 FieldName="create_by" Label="Share"  Sortable="Y" AllowURLParam="N" Translatable="N" OnEventLog="N" Link="javascript:;">
+            <EventHandler Name="fld_share2_onclick" Event="onclick" Function="LoadDialog(common.form.DataSharingForm,{@:Elem[fld_Id].Value})"/>		
+        </Element>
+        <Element Name="fld_name" Class="ColumnText" FieldName="display_name" Label="Contact Name"  Sortable="Y" AllowURLParam="N" Translatable="N" OnEventLog="N" Link="{OPENBIZ_APP_INDEX_URL}/contact/contact_detail/{@:Elem[fld_Id].Value}">         
+         	
+        </Element>	
+        <Element Name="fld_photo" Class="RawData"  ElementSet="Profile" FieldName="photo"  AllowURLParam="N" />
+        <Element Name="fld_position" Class="ColumnText" FieldName="position" Label="Position"  Sortable="Y" AllowURLParam="N" Translatable="N" OnEventLog="N" />
+        <Element Name="fld_phone" Class="ColumnText" FieldName="phone" Label="Phone"  Sortable="Y" AllowURLParam="N" Translatable="N" OnEventLog="N" />	
+        <Element Name="fld_mobile" Class="ColumnText" FieldName="mobile" Label="Mobile"  Sortable="Y" AllowURLParam="N" Translatable="N" OnEventLog="N" />	
+        <Element Name="fld_fax" Class="ColumnText" FieldName="fax" Label="Fax"  Sortable="Y" AllowURLParam="N" Translatable="N" OnEventLog="N" />	
+        <Element Name="fld_email" Class="ColumnText" FieldName="email" Label="Email"  Sortable="Y" AllowURLParam="N" Translatable="N" OnEventLog="N" />	        
+        <Element Name="fld_color" Class="RawData" FieldName="type_color" Label="Type"  Sortable="Y" AllowURLParam="N" Translatable="N" OnEventLog="N" />
+        <Element Name="fld_type" Class="ColumnText"  FieldName="type_name" Label="Type"  Sortable="Y" AllowURLParam="N" Translatable="N" OnEventLog="N" />						        
+  		
+        <Element Name="fld_more" Class="ColumnText"  FieldName="display_name" Text="more..."  Sortable="Y" AllowURLParam="N" Translatable="N" OnEventLog="N"  Link="{OPENBIZ_APP_INDEX_URL}/contact/contact_detail/{@:Elem[fld_Id].Value}">
+        </Element>
+        
+        <Element Name="row_selections" Hidden="Y" Class="Hidden"  Label="" FieldName="ID"/>
+        <Element Name="fld_published" Hidden="Y" Class="Hidden"  TrueImg="{OPENBIZ_RESOURCE_URL}/contact/images/icon_contact_shared.gif" FalseImg="{OPENBIZ_RESOURCE_URL}/contact/images/icon_contact.gif" FieldName="published" Label="Share"  Sortable="Y" AllowURLParam="N" Translatable="N" OnEventLog="N" Link="javascript:;">
+            <EventHandler Name="fld_status_onclick" Event="onclick" Function="UpdateFieldValueXor({@:Elem[fld_Id].Value},fld_published,{@:Elem[fld_published].Value})"/>		
+        </Element>	 
+        <Element Name="fld_Id" Class="Hidden" Hidden="Y" FieldName="Id" Label="ID" Sortable="Y" AllowURLParam="N" />
+        <Element Name="fld_display_name" Hidden="Y" Class="Hidden"  FieldName="display_name" Label="Contact Name"  Sortable="Y" AllowURLParam="N" Translatable="N" OnEventLog="N" Link="javascript:">         
+            <EventHandler Name="fld_Id_onclick" Event="onclick" Function="SwitchForm(contact.form.ContactDetailForm,{@:Elem[fld_Id].Value})"   />
+        </Element>	
+        
+        <Element Name="fld_sortorder" Hidden="Y" Class="Hidden" FieldName="sortorder" Label="Ordering"  Sortable="Y" AllowURLParam="N" Translatable="N" OnEventLog="N" ></Element>
+    </DataPanel>
+</EasyForm>

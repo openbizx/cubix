@@ -1,0 +1,9 @@
+<?xml version="1.0" standalone="no"?>
+<!--
+  Openbizx Cubi Application Platform
+  LICENSE http://code.google.com/p/openbiz-cubi/wiki/CubiLicense
+  Copyright (c) 2005-2011, Openbiz Technology LLC
+  Version $Id: BackupService.xml 3351 2012-05-31 05:33:35Z rockyswen@gmail.com $
+-->
+<PluginService Name="BackupService" Class="BackupService">
+</PluginService>

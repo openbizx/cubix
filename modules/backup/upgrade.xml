@@ -1,0 +1,16 @@
+<?xml version="1.0" standalone="no"?>
+<!--
+  Openbizx Cubi Application Platform
+  LICENSE http://code.google.com/p/openbiz-cubi/wiki/CubiLicense
+  Copyright (c) 2005-2011, Openbiz Technology LLC
+  Version $Id: upgrade.xml 3351 2012-05-31 05:33:35Z rockyswen@gmail.com $
+-->
+<Upgrade>
+    <Version Name="0.5">
+        <UpgradeSql><![CDATA[
+INSERT INTO `cronjob` (`name`, `minute`, `hour`, `day`, `month`, `weekday`, `command`, `sendmail`, `max_run`, `num_run`, `description`, `status`, `last_exec`, `create_by`, `create_time`, `update_by`, `update_time`) VALUES
+( 'Weekly Backup Entire System', '1', '20', '*', '*', '5', '{OPENBIZ_APP_PATH}/bin/cronjob/run_svc.php backup.lib.BackupService BackupSystem SystemBak', '', 1, 0, 'Weekly backup entire system,\nRun at every Friday 8pm', 1, NULL, 2, '2012-02-07 10:37:15', 2, '2012-02-07 10:37:15'),
+( 'Daily Backup System DB', '1', '1', '*', '*', '*', '{OPENBIZ_APP_PATH}/bin/cronjob/run_svc.php backup.lib.BackupService BackupDB SystemDB', '', 1, 0, 'Daily backup system database into default backup location.\nRunning in everyday midnight', 1, NULL, 2, '2012-02-07 10:35:02', 2, '2012-02-07 10:37:30');
+        ]]></UpgradeSql>
+    </Version>
+</Upgrade>

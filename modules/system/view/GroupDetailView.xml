@@ -1,0 +1,20 @@
+<?xml version="1.0" standalone="no"?>
+<!--
+  Openbizx Cubi Application Platform
+  LICENSE http://code.google.com/p/openbiz-cubi/wiki/CubiLicense
+  Copyright (c) 2005-2011, Openbiz Technology LLC
+  Version $Id: GroupDetailView.xml 5095 2013-01-09 06:10:26Z hellojixian@gmail.com $
+-->
+<WebPage Name="GroupDetailView" 
+         Description="Group Detail" 
+         Class="GroupView" 
+         Tab="" 
+         TemplateEngine="Smarty" 
+         TemplateFile="view.tpl" 
+         Access="Group.Administer_Groups">
+    <FormReferences>
+        <Reference Name="system.form.GroupDetailForm" 
+                   Subforms="system.form.RelatedUsersListForm"/>
+        <Reference Name="system.form.RelatedUsersListForm"/>
+    </FormReferences>   
+</WebPage>

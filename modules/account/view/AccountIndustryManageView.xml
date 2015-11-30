@@ -1,0 +1,11 @@
+<?xml version="1.0" standalone="no"?>
+<WebPage Name="AccountIndustryManageView" 
+	Description="Account Industry Description Management" 
+	Class="WebPage" 
+	Access="account.Access" 
+	TemplateEngine="Smarty" 
+	TemplateFile="view.tpl">
+   <FormReferences>
+   		<Reference Name="account.Industry.form.AccountIndustryListForm"/>
+   </FormReferences>       
+</WebPage>

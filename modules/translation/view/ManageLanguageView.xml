@@ -1,0 +1,13 @@
+<?xml version="1.0" standalone="no"?>
+<!--
+  Openbizx Cubi Application Platform
+  LICENSE http://code.google.com/p/openbiz-cubi/wiki/CubiLicense
+  Copyright (c) 2005-2011, Openbiz Technology LLC
+  Version $Id: ManageLanguageView.xml 3374 2012-05-31 06:22:06Z rockyswen@gmail.com $
+-->
+<WebPage Name="ManageLanguageView" Description="Translation Management " Class="WebPage" Tab="" TemplateEngine="Smarty" TemplateFile="view.tpl" Access="Translation.Administer_Transation">
+   <FormReferences>
+   		<Reference Name="translation.form.LanguageListForm"/>
+   </FormReferences>
+   
+</WebPage>

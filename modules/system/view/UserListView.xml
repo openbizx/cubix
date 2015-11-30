@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="no"?>
+<!--
+  Openbizx Cubi Application Platform
+  LICENSE http://code.google.com/p/openbiz-cubi/wiki/CubiLicense
+  Copyright (c) 2005-2011, Openbiz Technology LLC
+  Version $Id: UserListView.xml 3372 2012-05-31 06:19:06Z rockyswen@gmail.com $
+-->
+<WebPage Name="UserListView" Title="User Management" Description="User List View" class="WebPage" TemplateEngine="Smarty" TemplateFile="view_map.tpl.html" Access="User.Administer_Users">
+    <FormReferences>
+        <Reference Name="system.form.UserListForm"/>
+    </FormReferences>
+</WebPage>

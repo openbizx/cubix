@@ -1,0 +1,22 @@
+{
+    "name": "openbizx/cubix",
+    "description": "PHP Application Platform Based on Openbizx Framework",
+    "keywords": ["cubix", "openbizx", "framework", "application platform", "platform"],
+    "homepage": "http://openbizx.github.io/",
+    "type": "application",
+    "license": "BSD-3-Clause",
+    "support": {
+        "issues": "https://github.com/openbizx/openbizx/issues?state=open",
+        "forum": "https://groups.google.com/d/forum/openbizx",
+        "wiki": "https://github.com/openbizx/openbizx/wiki",
+        "source": "https://github.com/openbizx/openbizx"
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.4.0",
+        "openbizx/openbizx": "*"
+    },
+    "config": {
+        "process-timeout": 1800
+    }
+}

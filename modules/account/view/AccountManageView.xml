@@ -1,0 +1,11 @@
+<?xml version="1.0" standalone="no"?>
+<WebPage Name="AccountManageView" 
+	Description="Account Description Management" 
+	Class="WebPage" 
+	Access="account.Access" 
+	TemplateEngine="Smarty" 
+	TemplateFile="view.tpl">
+   <FormReferences>
+   		<Reference Name="account.form.AccountListForm"/>
+   </FormReferences>       
+</WebPage>

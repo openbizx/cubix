@@ -1,0 +1,32 @@
+{php}
+$widget = Openbizx\Openbizx::getObject('menu.widget.MainTabMenu');
+$widget->searchRule = "[PId]='MobileRoot'";
+if($widget->globalSearchRule && $widget->searchRule){
+	$searchRule = $widget->globalSearchRule ." and ". $widget->searchRule;
+}else{
+	$searchRule = $widget->searchRule;
+}
+$menu_count = $widget->getDataObj()->directfetch($searchRule)->count();
+$menu_item_width = 115;
+$menu_width = ($menu_count * $menu_item_width)."px";
+$this->assign('menu_count', $menu_count);
+{/php}
+
+<div data-role="header">
+	<h1>Application Home</h1>
+</div><!-- /header -->
+
+<div data-role="content">
+	{php}
+	echo Openbizx\Openbizx::getObject('menu.widget.MainTabMenu')->render();
+	{/php}
+	<div style="height:5px; display:block"></div>
+	<ul data-role="listview" data-inset="true">
+		<li><a class="icon_help" href="http://www.openbiz.me/" target="_blank" >{t}Help{/t}</a></li>
+		<li><a class="icon_logout" href="{$app_index}/user_mob/logout" >{t}Logout{/t}</a></li>
+	</ul>	
+</div><!-- /content -->
+	
+<div id="footer">
+{include file='system_footer_info.tpl.html'}
+</div>

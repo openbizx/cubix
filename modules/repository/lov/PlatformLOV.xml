@@ -1,0 +1,13 @@
+<?xml version="1.0" standalone="no"?>
+<!--
+  Openbizx Cubi Application Platform
+  LICENSE http://code.google.com/p/openbiz-cubi/wiki/CubiLicense
+  Copyright (c) 2005-2011, Openbiz Technology LLC
+  Version $Id: PlatformLOV.xml 3369 2012-05-31 06:13:56Z rockyswen@gmail.com $
+-->
+<Selection>
+   <Platform Value="3.0" text="Openbizx Framework v3.0"/>
+   <Platform Value="2.4" text="Openbizx Framework v2.4"/>
+   <Platform Value="2.3" text="Openbizx Framework v2.3"/>
+   <Platform Value="2.0" text="Openbizx Framework v2.0"/>   
+</Selection>

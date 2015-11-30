@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="no"?>
+<!--
+  Openbizx Cubi Application Platform
+  LICENSE http://code.google.com/p/openbiz-cubi/wiki/CubiLicense
+  Copyright (c) 2005-2011, Openbiz Technology LLC
+  Version $Id: ModuleDetailView.xml 3372 2012-05-31 06:19:06Z rockyswen@gmail.com $
+-->
+<WebPage Name="ModuleDetailView" Description="Module Management" class="WebPage" Tab="" TemplateEngine="Smarty" TemplateFile="view.tpl" Access="Module.Administer_Modules">
+    <FormReferences>
+        <Reference Name="system.form.ModuleDetailForm" SubForms="system.form.ModuleActionsForm;system.form.ModuleChangeLogForm"/>
+        <Reference Name="system.form.ModuleActionsForm"/>
+        <Reference Name="system.form.ModuleChangeLogForm"/>
+    </FormReferences>
+</WebPage>

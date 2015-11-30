@@ -1,0 +1,6 @@
+<?xml version="1.0" standalone="no"?>
+<WebPage Name="EventObserverListView" Description="eventmgr" Class="WebPage" Tab="" TemplateEngine="Smarty" TemplateFile="view.tpl" Access="eventmgr.Access">
+   <FormReferences>
+   		<Reference Name="eventmgr.form.EventObserverListForm"/>
+   </FormReferences>
+</WebPage>

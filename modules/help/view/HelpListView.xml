@@ -1,0 +1,19 @@
+<?xml version="1.0" standalone="no"?>
+<!--
+  Openbizx Cubi Application Platform
+  LICENSE http://code.google.com/p/openbiz-cubi/wiki/CubiLicense
+  Copyright (c) 2005-2011, Openbiz Technology LLC
+  Version $Id: HelpListView.xml 3345 2012-05-31 05:04:56Z rockyswen@gmail.com $
+-->
+<WebPage Name="HelpListView" Description="Help Management" Class="WebPage" Tab="" TemplateEngine="Smarty" TemplateFile="view.tpl" Access="Help.Administer_Help">
+   <FormReferences>
+   		<Reference Name="help.form.HelpListForm"/>
+   </FormReferences>
+   <FormReferenceLibs>
+   		<Reference Name="help.form.HelpListForm"/>
+   		<Reference Name="help.form.HelpEditForm"/>
+   		<Reference Name="help.form.HelpCopyForm"/>
+   		<Reference Name="help.form.HelpNewForm"/>
+   		<Reference Name="help.form.HelpDetailForm"/>
+   </FormReferenceLibs>    
+</WebPage>

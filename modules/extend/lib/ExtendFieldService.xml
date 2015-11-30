@@ -1,0 +1,10 @@
+<?xml version="1.0" standalone="no"?>
+<!--
+  Openbizx Cubi Application Platform
+  LICENSE http://code.google.com/p/openbiz-cubi/wiki/CubiLicense
+  Copyright (c) 2005-2011, Openbiz Technology LLC
+  Version $Id: ExtendFieldService.xml 3360 2012-05-31 06:00:17Z rockyswen@gmail.com $
+-->
+<PluginService Name="ExtendFieldService" 
+               Class="extend.lib.ExtendFieldService">	
+</PluginService>

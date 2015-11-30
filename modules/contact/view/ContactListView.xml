@@ -1,0 +1,10 @@
+<?xml version="1.0" standalone="no"?>
+<WebPage Name="ContactListView" 
+          Description="Contact Phone Book"  
+          Class="common.view.SelectorView" 
+          FromSelecotr="contact.widget.ViewSelectorLeftWidget"  
+          Tab="" 
+          TemplateEngine="Smarty" 
+          TemplateFile="view_contact.tpl" 
+          Access="contact.access">
+</WebPage>

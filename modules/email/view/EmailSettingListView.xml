@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="no"?>
+<!--
+  Openbizx Cubi Application Platform
+  LICENSE http://code.google.com/p/openbiz-cubi/wiki/CubiLicense
+  Copyright (c) 2005-2011, Openbiz Technology LLC
+  Version $Id: EmailSettingListView.xml 3358 2012-05-31 05:57:58Z rockyswen@gmail.com $
+-->
+<WebPage Name="EmailSettingListView" Description="Manage Email Setting" class="WebPage" Tab="" TemplateEngine="Smarty" TemplateFile="view.tpl" Access="EmailSetting.Administer_Email_Setting">
+    <FormReferences>
+        <Reference Name="email.form.EmailAccountListForm"/>
+    </FormReferences>
+</WebPage>

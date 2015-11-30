@@ -1,0 +1,10 @@
+<?xml version="1.0" standalone="no"?>
+<WebPage Name="v_Attributes" 
+          Description="Attributes Edit View" 
+          class="Openbizx\Easy\DynaView" 
+          Tab="" 
+          TemplateEngine="Smarty" 
+          TemplateFile="view_attr.tpl">
+   <FormReferences>
+   </FormReferences>
+</WebPage>

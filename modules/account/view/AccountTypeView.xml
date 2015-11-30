@@ -1,0 +1,11 @@
+<?xml version="1.0" standalone="no"?>
+<WebPage Name="AccountTypeView" 
+	Description="Type of Account Description" 
+	Class="WebPage" 
+	Access="account.Access" 
+	TemplateEngine="Smarty" 
+	TemplateFile="view.tpl">
+   <FormReferences>
+   		<Reference Name="account.form.AccountTypeListForm"/>
+   </FormReferences>       
+</WebPage>

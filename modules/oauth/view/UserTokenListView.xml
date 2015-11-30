@@ -1,0 +1,6 @@
+<?xml version="1.0" standalone="no"?>
+<WebPage Name="UserTokenListView" Description="oauth" Class="WebPage" Tab="" TemplateEngine="Smarty" TemplateFile="view.tpl" Access="oauth.Administer">
+   <FormReferences>
+   		<Reference Name="oauth.form.UserTokenListForm"/>
+   </FormReferences>
+</WebPage>

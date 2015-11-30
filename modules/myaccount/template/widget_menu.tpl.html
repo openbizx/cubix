@@ -1,0 +1,30 @@
+<form id="{$form.name}" name="{$form.name}">
+
+<h2 style="display:none">{$form.title}</h2>
+
+	<div class="" style="padding-top:5px;padding-bottom:2px;min-height:210px;height:auto;">
+	{assign var='i' value=0}
+	<table class="dashboard" >
+	{foreach item=item from=$widget.menu}
+	  {if $i == 0}
+	    <tr>
+	  	<td valign="top">
+	  		<div class="{$item->iconCSSClass}" style="padding-bottom:0px">
+				<h3>{$item->objectName}</h3>
+				{if $item->childNodes|@count > 0}
+				<ul>
+				{foreach item=subitem from=$item->childNodes}													
+					<li><a href="{if $subitem->url}{$subitem->url}{else}javascript:{/if}">{$subitem->objectName}</a></li>					
+				{/foreach}	
+				</ul>
+				{assign var='i' value=$i+1}	
+				{/if}
+			</div>
+	  	</td>
+	    <tr>
+	  {/if}
+	{/foreach}
+	</table>
+	</div>
+
+</form>		

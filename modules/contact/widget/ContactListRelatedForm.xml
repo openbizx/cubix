@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Openbizx Cubi Application Platform
+  LICENSE http://code.google.com/p/openbiz-cubi/wiki/CubiLicense
+  Copyright (c) 2005-2011, Openbiz Technology LLC
+  Version $Id: ContactListRelatedForm.xml 3356 2012-05-31 05:47:51Z rockyswen@gmail.com $
+-->
+<EasyForm Name="ContactListRelatedForm" PageSize="-1" Class="EasyForm" FormType="List" jsClass="jbForm" Title="" Description="" BizDataObj="contact.do.ContactRefDO" inheritFrom="contact.widget.ContactListDetailForm"  Access="contact.access" >
+
+
+</EasyForm>
