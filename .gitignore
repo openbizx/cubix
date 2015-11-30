@@ -2,3 +2,8 @@
 /files/cache
 /files/tpl_cpl
 /files/upload
+vendor
+install.lock
+cache
+tpl_cpl
+upload
